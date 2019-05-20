@@ -10,11 +10,11 @@ int main()
         {
             sum=sum+i;
         }
+        printf("%d",sum);
     }
     else
     {
-        return 0;
+        printf("invalid,N numbers starts from 1");
     }
-    printf("%d",sum);
     return 0;
 }
