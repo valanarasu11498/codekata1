@@ -5,6 +5,11 @@ int main()
 {
     int n,fact=1;
     scanf("%d",&n);
+    if(n<0)
+    {
+        printf("invalid");
+        return 0;
+    }
     if(n==1)
     {
         printf("1");
