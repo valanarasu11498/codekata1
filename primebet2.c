@@ -3,7 +3,7 @@ int main()
 {
     int low, high, i, flag, temp;
     scanf("%d %d", &low, &high);
-
+    low=low+1;
     while (low < high)
     {
         flag = 0;
