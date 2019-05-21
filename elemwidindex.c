@@ -10,7 +10,8 @@ int main()
   }
   for(i=0;i<n;i++)
   {
-      printf("%d %d \n",a[i],i);
+      printf("%d %d",a[i],i);
+      printf("\n");
   }
   return 0;
 }
