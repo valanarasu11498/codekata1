@@ -10,7 +10,7 @@ int main()
     }
     else if(n==1)
     {
-        printf("1");
+        printf("1 ");
     }
     else
     {
