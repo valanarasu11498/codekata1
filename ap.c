@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main()
 {
-    int sum,b,m,e,i;
-    sum=0;
-    scanf("%d%d%d",&m,&b,&e);
-    sum=(m*(2*b+(m-1)*e))/2;
+    int sum,b,a,c,i;
+    scanf("%d%d%d",&a,&b,&c);
+    sum=(a*(2*b+(a-1)*c));
+    sum=sum/2;
     printf("%d",sum);
             return 0;
 }
