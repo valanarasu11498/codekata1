@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+function login(){
+		var Product = $('#pr').val();
+		localStorage.setItem('Product',Product);
+		/*if(userName && password){
+			window.location.href = "Homealogin.html";
+		}*/
+		
+	}
+</script>
+
+ 
+<div class="container">
+<div class="topnav">
+  <a href="#home">PRODUCTS</a>
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+</diV><br>
+<div class="container">
+<div class="row">
+<div class="col-md-6 well">
+<img class="images1" src="image/mix.jpg"></img>
+</div>
+<div class="col-md-6">
+<p><h2 id="pr">Prestige Mixer</h2></p>
+<h4></label>Price in INR:</label></h4> <p> <h1><i class="fa fa-inr" aria-hidden="true"> 3000</i></h1></p> 
+<p class="text-success"><strong>In stock</strong></p>
+<p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true">
+</i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true">
+</i><i class="fa fa-star-half-o" aria-hidden="true"></i></p>
+<h4></label>Description:</label></h4> <h5><p> Warranty: 2 year</p>
+
+<p>Troubleshooting guidelines: i) Jar safety lock to ensure safety - product won't start if not locked correctly, operating noise levels between 80-90 dB 
+ii) Do not run the mixer grinder for more than 5 minutes continuously, give a gap of 2 minutes if you need to use for more time 
+iii) Initial burning smell is to be expected due to evaporating varnish</p>
+
+<p>Motor type- 750 W, 
+3 stainless steel jar + 1 juicer jar ; 
+Voltage(V) is 230</p>
+<p>3 speed control, 3 multipurpose blade, overload protector, Body Shape: Cylindrical Shape</p>
+<p>Includes: Main unit, user manual, warranty card</p>
+<p>Product dimensions: 23cm(Length)x18cm(Width)x24cm(Height). Weight: 2.08kg</p>
+<p>Contact_us on: [ 1800-123-334411</h5></p>
+</div>
+</div>
+</div>
+<div class="container well">
+<div class="row">
+<div class="col-md-6">
+<button type="submit" class="text-center btnbuy" onclick="cart()" >ADD TO CART</button></div>
+<div class="col-md-6">
+<button type="submit" class="text-center btnbuy"  onclick="wish()" >ADD TO WISHLIST</button></div>
+</div>
+<div class="row">
+<div class="col-md-12 text-center">
+ 		    <button type="submit" class="text-center btnbuy" onclick="show()"  >BUY NOW</button> 
+			</div>
+   </div>
+   <p> <h5 class="text-info" id="notify"> </h5></p>
+</div>
+<div class="container ">
+<div class="row">
+<div class="col-md-3">
+</div>
+<div class="col-md-6 class="bill">
+<p> <h1 id="amt"> </h1></p>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-12 text-center">
+<form action="final.html">
+ 		    <button type="submit" class="text-center btnbuy"  >CONFIRM</button> </form>
+			</div>
+</div><br><br>
+</div>
+<script>
+function cart()
+{
+document.getElementById("notify").innerHTML = "one item added to the cart";
+}
+function wish()
+{
+document.getElementById("notify").innerHTML = "one item added to the wishlist";
+}
+function show(){
+document.getElementById("notify").innerHTML = "check your bill ,order details and confirm your order by click the button in below";
+document.getElementById("amt").innerHTML = "Your order amount is 3000 INR";
+} 
+</script>
+</body>
+</html>

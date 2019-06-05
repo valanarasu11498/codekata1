@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+	function logOut(){
+		localStorage.removeItem('userName');
+		window.location.href = 'home_page1.html';
+	}
+</script>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+	<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+
+	<span class="icon-bar"></span>
+
+	</button>
+      <a class="navbar-brand" href="#">iSHOPMART</a>
+    </div>
+	<div id="MyNavbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="afterlogin.html"><i class="	glyphicon glyphicon-home"> HOME</i></a></li>
+      <li><a href="cart.html"><i class="	glyphicon glyphicon-lock"> CART</i></a></li>
+	  <li><a href="wish.html"><i class="	glyphicon glyphicon-star"> WISHLIST</i></a></li>
+      <li><a href="profile.html"><i class="	glyphicon glyphicon-user"> PROFILE</i></a></li>
+      <li><a href="home_page1.html"><i class="	glyphicon glyphicon-log-out"> LOGOUT</i></a></li>
+    </ul></div>
+  </div>
+</nav>
+<div class="container">
+<div class="topnav">
+  <a href="#home">PRODUCTS</a>
+  <div class="search-container">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+  </div>
+</div>
+</diV><br>
+  
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 3</div>
+    <img src="image/img1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 3</div>
+    <img src="image/img2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 3</div>
+    <img src="image/img3.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+  </div>
+<br>
+<div class="container">
+<div class="row">
+<a href="mix.html"><div class="col-md-3 well">
+<img class="images" src="image/mix.jpg"></img></a>
+</div>
+<div class="col-md-3 well">
+<a href="lap.html"><img class="images" src="image/lap1.jpg"></img></a>
+</div>
+<div class="col-md-3 well">
+<a href="kajal.html"><img class="images" src="image/oil.jpg"></img></a>
+</div>
+<div class="col-md-3 well">
+<a href="sbat.html"><img class="images" src="image/img4.jpg"></img></a>
+</div>
+</div>
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</body>
+</html>
