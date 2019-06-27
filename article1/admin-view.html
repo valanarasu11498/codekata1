@@ -1,0 +1,195 @@
+<html lang="en">
+	<head>
+	  <title>Add Article</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <script src="js/view-article.js"></script>
+	<!--  <link rel="stylesheet" href="css/logstyle.css"> -->\
+	<style>
+	.category-container .cat
+	{
+	         padding: 20px;
+			border: 1px solid #ddd;
+			font-size: 20px;
+			margin-bottom : 20px;
+			border-radius : 5px;
+	}
+	
+	.category-container .col-md-8{
+		font-weight: bold;
+		color: #2f9715;
+	}
+	
+	.img-box{
+		    padding: 20px;
+			height: 350px;
+	}
+	
+	.img-box img{
+		width : 100%;
+		height : 100%;
+	}
+	.image-container {
+		margin-bottom : 20px;
+	}
+	
+	.content-box {
+		height : 300px;
+		margin-bottom : 20px;
+	}
+	
+	.content-box textarea {
+		height : 100%;
+	}
+	
+	.user-date{
+		padding: 0;
+		margin-bottom: 10px;
+		font-size: 20px;
+		color: #2fa364;
+	}
+	.content-container {
+		margin-bottom : 20px;
+	}
+	
+	comments{
+		    line-height: 15px;
+	}
+	
+	.comment-box{
+		padding: 25px;
+		border: 1px solid #ddd;
+		margin-bottom: 5px;
+	}
+	
+	.edit-comment {
+		padding: 0;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.add-btn {
+		margin-top: 20px;
+	}
+	
+	
+	</style>
+
+	</head>
+	<body>
+
+		<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+	<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+
+	<span class="icon-bar"></span>
+
+	</button>
+      <a class="navbar-brand" href="#">INFINITI SOFTWARE SOLUTIONS</a>
+    </div>
+	<div id="MyNavbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="admin.html"><i class="	glyphicon glyphicon-home"> HOME</i></a></li>
+      <li class="active"><a href="adminarticles.php"><i class="	glyphicon glyphicon-lock">ARTICLES</i></a></li>
+      <li><a href="home_page1.php"><i class="	glyphicon glyphicon-log-in"> LOGOUT</i></a></li>
+    </ul>
+	</div>
+  </div>
+</nav>
+ 
+		<div class="container well">
+		<div class="">
+			<div class="col-md-12 text-center">
+				<h1 id="title">
+					
+				</h1>
+			</div>
+			<div class="col-md-12 category-container">
+				<div class="col-md-12">
+					<div id="category" class="col-md-4 cat">
+						<div class="col-md-4">
+							Category
+						</div>
+						<div id="cat-val" class="col-md-8">
+							
+						</div>
+					</div>
+					<div id="tag" class="col-md-4 cat">
+						<div class="col-md-4">
+							tag
+						</div>
+						<div id="tag-val" class="col-md-8">
+							
+						</div>
+					</div>
+					<div id="author" class="col-md-4 cat">
+						<div class="col-md-4">
+							author
+						</div>
+						<div id="author-val" class="col-md-8">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 image-container">
+				<div class="col-md-12" id="image-container">
+					
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-6 col-md-offset-3">
+						<input class="form-control" type="file" id="newfile" />
+					</div>
+					<div class="col-md-3">
+						<button onclick="addImage()" class="btn btn-default"> Add Image </button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-md-12 content-container">
+				<div class="col-md-12">
+					<div class="col-md-12">
+						<label>content</label>
+						<div class="col-md-12 no-padding content-box">
+							<textarea id="content" class="content-area form-control"></textarea>
+						</div>
+						
+					</div>
+				</div>
+				<div class="col-md-12 text-center">
+					<button onclick="saveContent()" class="btn btn-default"> Save and Publish</button>
+					<!--<button onclick="publishContent()" class="btn btn-default"> Publish </button>-->
+				</div>
+			</div>
+			
+			
+			<div class="col-md-12 comment-container">
+				<div class="col-md-12" id="comments">
+					
+				</div>
+				<div class="col-md-12 edit-comment">
+					<div class="col-md-12 text-center">
+						<textarea id="add-comment" class="content-area form-control"></textarea>
+					</div>
+					<div class="col-md-12 text-center add-btn">
+						<button onclick="addComment()" class="btn btn-default"> Add Comments </button>
+					</div>
+
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+
+	  </div>
+
+	  </body>
+</html>

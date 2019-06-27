@@ -1,0 +1,109 @@
+<html lang="en">
+	<head>
+	  <title>Add Article</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	  <script src="js/create_article.js"></script>
+	<link rel="stylesheet" href="css/logstyle.css">
+	<style>
+	.form-columns .col-md-12, .form-columns .col-md-6
+	{
+	margin-bottom:20px;
+	}
+	</style>
+
+	</head>
+	<body>
+
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MyNavbar">
+	<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+
+	<span class="icon-bar"></span>
+
+	</button>
+      <a class="navbar-brand" href="#">INFINITI SOFTWARE SOLUTIONS</a>
+    </div>
+	<div id="MyNavbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li ><a href="admin.html"><i class="	glyphicon glyphicon-home"> HOME</i></a></li>
+      <li class="active"><a href="adminarticles.php"><i class="	glyphicon glyphicon-lock">ARTICLES</i></a></li>
+      <li><a href="home_page1.php"><i class="	glyphicon glyphicon-log-in"> LOGOUT</i></a></li>
+    </ul>
+	</div>
+  </div>
+</nav>
+		<div class="container well">
+			<div class="row">
+				<div class="col-md-12 text-center heading">
+					<h1>Create Article</h1>
+				</div>
+				<form>
+				<div class="col-md-12 form-columns no-padding">
+					<div class="col-md-6">
+						<label>Title</label>
+						<input type="text" id="title" class="form-control" required />
+					</div>
+					<div class="col-md-6">
+						<label>Author</label>
+						<input type="text" id="author" class="form-control" required />
+					</div>
+					<div class="col-md-6">
+						<label>Category</label>
+						<select id="category" class="form-control">
+							<option value="travel updates">travel updates</option>               
+							<option value="technology updates">technology updates</option>
+							<option value="product updates">product updates</option>
+							<option value="events">events</option>
+							<option value="achievements">achievements</option>
+							<option value="awards">awards</option>
+						</select>
+					</div>
+					<div class="col-md-6">
+						<label>Tag</label>
+						<select id="tag" class="form-control">
+							<option value="car">Car</option>
+							<option value="holiday">Holiday</option>                  
+							<option value="Airline">Airline</option>                  
+							<option value="Hotel">Hotel</option>                 
+							<option value="Packages">Packages</option>                  
+							<option value="Deals">Deals</option>                  
+						</select>	
+					</div>
+					<div class="col-md-6">
+						<label>Image</label>
+						<input type="file" id="image" class="form-control" required />
+					</div>
+					<div class="col-md-12">
+						<label>Content</label>
+						<textarea row=25 id="content" class="form-control">
+						</textarea>
+					</div>
+		
+					<div class="col-md-4">
+					</div>
+					<div class="col-md-4">
+						<button type="button" class="btn btn-default" onclick="save()"> Save</button>
+					</div>
+					<div class="col-md-12">
+					<p class="text-info">This page is only for create article, Created article will be saved as draft and displayed in the home/article page.
+					To publish the article click the created articles in home/article page you can find save and published button/option.</p>
+					</div>
+					<!--<div class="col-md-6">
+						<button type="button" onclick="publish()"> Publish</button>
+					</div>-->
+				</div></form>
+			</div>
+		</div>
+		</form>
+
+	  
+
+	  </body>
+</html>
